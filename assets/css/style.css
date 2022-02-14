@@ -1,0 +1,362 @@
+:root {
+    --background-color: #323437;
+    --main-color: #E1B712;
+    --main-color-active: #957A0E;
+    --secondary-color: #D1D0C5;
+    --background-icon-opacity: 5%;
+}
+
+body {
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+/* Page Selector*/
+.page-selector {
+    position: absolute;
+    width: fit-content;
+    height: 112px;
+
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-radius: 5px;
+    background-color: var(--background-color);
+}
+
+.page-selector .dot {
+    background-color: var(--secondary-color);
+    width: 1.5vw;
+    height: 1.5vw;
+    min-width: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+    margin: 0 .5vw 8px;
+}
+
+.page-selector .dot:not(.active) {
+    cursor: pointer;
+}
+
+.page-selector .dot.active {
+    background-color: var(--main-color);
+}
+
+/* Section 1*/
+/* Icon Background */
+.section-1 .icon-background {
+    width: 105vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: wrap row;
+    flex-flow: wrap row;
+}
+
+.section-1 .icon-background .iconWrapper {
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    min-width: 75px;
+    min-height: 75px;
+}
+
+.section-1 .icon-background .iconWrapper .icon {
+    position: absolute;
+    color: #fff;
+    opacity: var(--background-icon-opacity);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+/* Yellow Button */
+.yellow-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 1vw;
+    cursor: pointer;
+
+    border-width: 0.5vw;
+    border-color: var(--main-color);
+    border-radius: .75vw;
+    background-color: #323437;
+    border-style: solid;
+
+    color: var(--main-color);
+    font-size: 2.5vw;
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 750px) {
+    .yellow-button {
+        border-width: 4px;
+        border-radius: 6px;
+    }
+}
+
+.yellow-button:active {
+    border-color: var(--main-color-active);
+    color: var(--main-color-active);
+}
+
+/* Main Container */
+.section-1 .main-container {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    height: 300px;
+    margin-left: 2vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: baseline;
+    align-content: baseline;
+
+    font-family: "Source Code Pro", sans-serif;
+}
+
+.section-1 .main-container .subtitle {
+    width: fit-content;
+    height: fit-content;
+
+
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.section-1 .main-container .title {
+    width: fit-content;
+    height: fit-content;
+    line-height: 8.5vw;
+    margin-bottom: 2.5vw;
+
+    font-weight: 400;
+    color: var(--main-color);
+    font-size: 6.5vw;
+    text-align: center;
+}
+
+.section-1 .main-container .title::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - 8.5vw) * 0.5em);
+}
+
+@media screen and (max-width: 1900px) {
+    .section-1 .main-container .subtitle {
+        font-size: 3.5vw;
+    }
+
+    .section-1 .main-container .title {
+        font-size: 6.5vw;
+        line-height: 6.5vw;
+    }
+
+    .section-1 .main-container .title::before {
+        margin-top: calc((1 - 6.5vw) * 0.5em);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .section-1 .main-container .subtitle {
+        font-size: 32px;
+        margin-bottom: -30px;
+    }
+
+    .section-1 .main-container .title {
+        font-size: 110px;
+        line-height: 110px;
+    }
+
+    .section-1 .main-container .title::before {
+        margin-top: calc((1 - 110px) * 0.5em);
+    }
+
+    .section-1 .main-container .yellow-button {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section-1 .main-container .subtitle {
+        font-size: 21px;
+        margin-bottom: -20px;
+    }
+
+    .section-1 .main-container .title {
+        font-size: 73px;
+        line-height: 73px;
+    }
+
+    .section-1 .main-container .title::before {
+        margin-top: calc((1 - 73px) * 0.5em);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-1 .main-container .subtitle {
+        font-size: 14px;
+        margin-bottom: -15px;
+    }
+
+    .section-1 .main-container .title {
+        font-size: 49px;
+    }
+
+    .section-1 .main-container .yellow-button {
+        min-width: 200px;
+        min-height: 45px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .section-1 .main-container .title {
+        font-size: 32px;
+    }
+}
+
+/* Link Container*/
+.section-1 .link-container {
+    position: absolute;
+    bottom: 1vw;
+    left: 2vw;
+}
+
+.section-1 .link-container i {
+    color: var(--main-color);
+    position: absolute;
+}
+
+.section-1 .link-container span {
+    color: var(--main-color);
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: 400;
+    margin-left: 22px;
+    line-height: 0;
+
+    cursor: pointer;
+}
+
+.section-1 .link-container span:not(.muted):hover {
+    text-decoration: underline;
+}
+
+.section-1 .link-container span.muted {
+    color: var(--secondary-color);
+    margin-left: 0;
+}
+
+/* Section 2*/
+.section-2 .main-container {
+    position: absolute;
+    width: 40vw;
+    height: fit-content;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.section-2 .main-container .title {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: 200;
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 2vw;
+}
+
+.section-2 .main-container .about-me {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: 200;
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 1vw;
+}
+
+.section-2 .main-container .services-grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+}
+
+.section-2 .main-container .service-item-container {
+    position: relative;
+    flex: 1 0 50%;
+}
+
+.section-2 .main-container .service-item-container .service-item {
+    display: flex;
+    align-items: center;
+}
+
+.section-2 .main-container .service-item-container.plus-more .service-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .main-container .service-item-container .service-item i {
+    color: var(--main-color);
+    margin-right: 5px;
+    font-size: 1vw;
+}
+
+.section-2 .main-container .service-item-container .service-item span {
+    font-family: "Source Code Pro", sans-serif;
+    color: var(--secondary-color);
+    font-size: 1vw;
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
+}
+
+.section-2 .main-container .service-item-container.plus-more .service-item span {
+    width: fit-content;
+}
+
+@media screen and (max-width: 1900px) {
+    .section-2 .main-container {
+        width: 60vw;
+    }
+
+    .section-2 .main-container .title {
+        font-size: 2.5vw;
+    }
+
+    .section-2 .main-container .about-me, .section-2 .main-container .service-item-container .service-item span, .section-2 .main-container .service-item-container .service-item i {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section-2 .main-container {
+        width: 90vw;
+    }
+
+    .section-2 .main-container .title {
+        font-size: 6vw;
+    }
+
+    .section-2 .main-container .about-me, .section-2 .main-container .service-item-container .service-item span, .section-2 .main-container .service-item-container .service-item i {
+        font-size: 3vw;
+    }
+}
