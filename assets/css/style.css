@@ -367,7 +367,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .section-2 .main-container {
-        width: 85.section-2 .main-container {vw;
+        width: 85vw;
     }
 
     .section-2 .main-container .services-grid-container {
