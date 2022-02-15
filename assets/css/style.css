@@ -303,12 +303,6 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-    .section-2 .main-container .services-grid-container {
-        gap: 20px;
-    }
-}
-
 .section-2 .main-container .service-item-container {
     position: relative;
     flex: 1 0 50%;
@@ -368,5 +362,15 @@ body {
     .section-2 .main-container .service-item-container .service-item i,
     .section-2 .main-container .service-item-container .service-item span {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-2 .main-container {
+        width: 85.section-2 .main-container {vw;
+    }
+
+    .section-2 .main-container .services-grid-container {
+        gap: 10px;
     }
 }
