@@ -1,8 +1,8 @@
 :root {
     --background-color: #323437;
-    --main-color: #E1B712;
-    --main-color-active: #957A0E;
-    --secondary-color: #D1D0C5;
+    --main-color: #e1b712;
+    --main-color-active: #957a0e;
+    --secondary-color: #d1d0c5;
     --background-icon-opacity: 5%;
 }
 
@@ -82,42 +82,10 @@ body {
     }
 }
 
-/* Yellow Button */
-.yellow-button {
-    width: fit-content;
-    height: fit-content;
-    padding: 1vw;
-    margin: 1vw .5vw 0;
-    cursor: pointer;
-
-    border-width: 0.5vw;
-    border-color: var(--main-color);
-    border-radius: .75vw;
-    background-color: #323437;
-    border-style: solid;
-
-    color: var(--main-color);
-    font-size: 2.5vw;
-    font-family: "Source Code Pro", sans-serif;
-    font-weight: 700;
-}
-
-@media screen and (max-width: 750px) {
-    .yellow-button {
-        border-width: 4px;
-        border-radius: 6px;
-    }
-}
-
-.yellow-button:active {
-    border-color: var(--main-color-active);
-    color: var(--main-color-active);
-}
-
 /* Main Container */
 .section-1 .main-container {
     position: absolute;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
     top: 50%;
     margin-left: 2vw;
     display: flex;
@@ -128,15 +96,21 @@ body {
     font-family: "Source Code Pro", sans-serif;
 }
 
-.section-1 .main-container .subtitle {
-    width: fit-content;
-    height: fit-content;
+.section-1 .main-container .profile-img-container {
+    position: relative;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    width: 15vw;
+    height: 15vw;
+}
 
-
-    font-weight: 400;
-    color: var(--secondary-color);
-    font-size: 2.5vw;
-    text-align: center;
+.section-1 .main-container .profile-img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 66%;
+    height: auto;
 }
 
 .section-1 .main-container .title {
@@ -151,7 +125,7 @@ body {
 }
 
 .section-1 .main-container .title::before {
-    content: '';
+    content: "";
     display: block;
     height: 0;
     width: 0;
@@ -159,10 +133,6 @@ body {
 }
 
 @media screen and (max-width: 1900px) {
-    .section-1 .main-container .subtitle {
-        font-size: 3.5vw;
-    }
-
     .section-1 .main-container .title {
         font-size: 6.5vw;
         line-height: 6.5vw;
@@ -174,10 +144,6 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-    .section-1 .main-container .subtitle {
-        font-size: 42px;
-    }
-
     .section-1 .main-container .title {
         font-size: 80px;
         line-height: 80px;
@@ -186,15 +152,12 @@ body {
     .section-1 .main-container .title::before {
         margin-top: calc((1 - 80px) * 0.5em);
     }
-
-    .section-1 .main-container .yellow-button {
-        font-size: 30px;
-    }
 }
 
 @media screen and (max-width: 900px) {
-    .section-1 .main-container .subtitle {
-        font-size: 21px;
+    .section-1 .main-container .profile-img-container {
+        width: 135px;
+        height: 135px;
     }
 
     .section-1 .main-container .title {
@@ -204,21 +167,12 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .section-1 .main-container .subtitle {
-        font-size: 24px;
-        margin-bottom: -10px;
-    }
-
     .section-1 .main-container .title {
         font-size: 55px;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .section-1 .main-container .subtitle {
-        font-size: 20px;
-    }
-
     .section-1 .main-container .title {
         font-size: 35px;
     }
@@ -334,7 +288,11 @@ body {
     width: 100%;
 }
 
-.section-2 .main-container .service-item-container.plus-more .service-item span {
+.section-2
+.main-container
+.service-item-container.plus-more
+.service-item
+span {
     width: fit-content;
 }
 
@@ -347,11 +305,15 @@ body {
         font-size: 2.5vw;
     }
 
-    .section-2 .main-container .about-me, .section-2 .main-container .service-item-container .service-item span, .section-2 .main-container .service-item-container .service-item i {
+    .section-2 .main-container .about-me {
+        font-size: 1.25vw;
+    }
+
+    .section-2 .main-container .service-item-container .service-item span,
+    .section-2 .main-container .service-item-container .service-item i {
         font-size: 1.5vw;
     }
 }
-
 
 @media screen and (max-width: 1000px) {
     .section-2 .main-container .title {
@@ -372,5 +334,112 @@ body {
 
     .section-2 .main-container .services-grid-container {
         gap: 10px;
+    }
+}
+
+/* Section 3 */
+.section-3 .timeline-grid-container {
+    position: absolute;
+    height: 80vh;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.section-3 .timeline-grid-container .timeline-line {
+    content: '';
+    position: absolute;
+
+    height: 100%;
+    width: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    margin-left: -2.5px;
+
+    background-color: var(--secondary-color);
+}
+
+.section-3 .timeline-grid-container .timeline-item {
+    position: relative;
+    flex: 1 0 50%;
+    max-width: 50%;
+    font-family: "Source Code Pro", sans-serif;
+    color: var(--secondary-color);
+    font-size: 1.75vh;
+}
+
+/* Declare timeline item distance from the timeline's line*/
+.section-3 .timeline-grid-container .timeline-item p {
+    --side-margins: 2vw;
+
+    position: relative;
+    margin: 0 var(--side-margins);
+}
+
+/* Offset right side down */
+.section-3 .timeline-grid-container .timeline-item:nth-child(odd) p {
+    margin-top: 5vh;
+}
+
+/* Position yellow dot onto timeline */
+.section-3 .timeline-grid-container .timeline-item p::after {
+    /*       Offsets by the side margin      Offsets by 25px or 5vw, look below */
+    --offset: calc((var(--side-margins) * -1) - min(5vw, calc(25px / 2)));
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--offset);
+    width: 5vw;
+    height: 5vw;
+    max-width: 25px;
+    max-height: 25px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+/* Position dot onto timeline */
+@media screen and (min-width: 800px) {
+    /* On all right column items, nullify the left value and instead use the right value*/
+    .section-3 .timeline-grid-container .timeline-item:nth-child(even) p::after {
+        left: auto;
+        right: var(--offset);
+    }
+}
+
+.section-3 .timeline-grid-container .timeline-item p b {
+    color: var(--main-color);
+}
+
+/* Break the two columns into one*/
+@media screen and (max-width: 800px) {
+    /* Expand the timeline grid container */
+    .section-3 .timeline-grid-container {
+        width: 80%;
+    }
+
+    /* Move the timeline to the left */
+    .section-3 .timeline-grid-container .timeline-line {
+        left: 0;
+    }
+
+    /* Make each flex item take up 100% of the space */
+    .section-3 .timeline-grid-container .timeline-item {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+
+    /* Enlarge the side margin */
+    .section-3 .timeline-grid-container .timeline-item p {
+        --side-margins: 3vw;
+
+        margin-top: 0!important;
     }
 }
