@@ -212,7 +212,6 @@ const icons = shuffle([
 	"fas fa-phone-volume",
 	"fas fa-photo-video",
 	"fas fa-plug",
-	"fas fa-poo",
 	"fas fa-pound-sign",
 	"fas fa-power-off",
 	"fas fa-print",
@@ -302,28 +301,6 @@ icons.forEach(function (iconName) {
 	iconBackground.appendChild(iconWrapper);
 })
 
-const copyToClipboard = function (text) {
-	const textarea = document.createElement("textarea");
-	textarea.value = text;
-	document.body.appendChild(textarea);
-	textarea.select();
-	document.execCommand("copy");
-	document.body.removeChild(textarea);
-}
-
-const fade = function (element, fade, callback) {
-	let opacity = 1;
-	const timer = window.setInterval(function () {
-		if ((opacity <= 0.1 && fade) || (opacity === 1 && !fade)) {
-			clearInterval(timer);
-			callback();
-		}
-
-		element.style.opacity = opacity;
-		(fade) ? opacity -= 0.1 : opacity += 0.1;
-	}, 10)
-}
-
 const linkContainer = document.getElementsByClassName("link-container")[0];
 const linkRows = linkContainer.getElementsByClassName("link-row");
 
@@ -331,31 +308,7 @@ for (let row of linkRows) {
 	const span = row.getElementsByTagName("span")[0];
 
 	span.addEventListener("click", function () {
-		if (span.dataset.url) {
-			window.open(span.dataset.url);
-		} else if (span.dataset.copy) {
-			copyToClipboard(span.dataset.copy);
-
-			fade(span, true, function () {
-				const html = span.innerHTML;
-				span.innerHTML = "Copied!";
-				span.style.cursor = "default";
-				span.style.textDecoration = "none";
-
-				fade(span, false, function () {
-					window.setTimeout(function () {
-
-						fade(span, true, function () {
-							span.innerHTML = html;
-							span.style.cursor = "pointer";
-							span.style.textDecoration = null;
-
-							fade(span, false, function () {});
-						})
-					}, 3000);
-				});
-			});
-		}
+		window.open(span.dataset.url);
 	})
 }
 
@@ -372,10 +325,3 @@ for (const pageSelector of pageSelectors) {
 		}
 	}
 }
-
-const mainContainer = document.getElementsByClassName("main-container")[0];
-const titleButton = mainContainer.getElementsByClassName("yellow-button")[0];
-
-titleButton.addEventListener('click', function () {
-	fullpage_api.moveTo(2);
-})
