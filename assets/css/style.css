@@ -8,7 +8,6 @@
 
 body {
     background-color: var(--background-color);
-    overflow: hidden;
 }
 
 /* Page Selector*/
@@ -288,11 +287,7 @@ body {
     width: 100%;
 }
 
-.section-2
-.main-container
-.service-item-container.plus-more
-.service-item
-span {
+.section-2 .main-container .service-item-container.plus-more .service-item span {
     width: fit-content;
 }
 
@@ -372,12 +367,13 @@ span {
     max-width: 50%;
     font-family: "Source Code Pro", sans-serif;
     color: var(--secondary-color);
-    font-size: 1.75vh;
+    font-size: 1vw;
 }
 
 /* Declare timeline item distance from the timeline's line*/
 .section-3 .timeline-grid-container .timeline-item p {
     --side-margins: 2vw;
+    --dot-width: 25px;
 
     position: relative;
     margin: 0 var(--side-margins);
@@ -390,17 +386,15 @@ span {
 
 /* Position yellow dot onto timeline */
 .section-3 .timeline-grid-container .timeline-item p::after {
-    /*       Offsets by the side margin      Offsets by 25px or 5vw, look below */
-    --offset: calc((var(--side-margins) * -1) - min(5vw, calc(25px / 2)));
+    /* Offsets by the side margin */
+    --offset: calc((var(--side-margins) * -1) - (var(--dot-width) / 2));
 
     content: '';
     position: absolute;
     top: 0;
     left: var(--offset);
-    width: 5vw;
-    height: 5vw;
-    max-width: 25px;
-    max-height: 25px;
+    width: var(--dot-width);
+    height: var(--dot-width);
     border-radius: 50%;
     background-color: var(--main-color);
 }
@@ -418,11 +412,18 @@ span {
     color: var(--main-color);
 }
 
+@media screen and (max-width: 1200px) {
+    .section-3 .timeline-grid-container .timeline-item {
+        font-size: 13px;
+    }
+}
+
 /* Break the two columns into one*/
 @media screen and (max-width: 800px) {
     /* Expand the timeline grid container */
     .section-3 .timeline-grid-container {
         width: 80%;
+        height: 95vh;
     }
 
     /* Move the timeline to the left */
@@ -439,7 +440,18 @@ span {
     /* Enlarge the side margin */
     .section-3 .timeline-grid-container .timeline-item p {
         --side-margins: 3vw;
+        --dot-width: 20px;
 
         margin-top: 0!important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section-3 .timeline-grid-container .timeline-item {
+        font-size: 12px;
+    }
+
+    .section-3 .timeline-grid-container .timeline-item p {
+        --side-margins: 15px;
     }
 }
