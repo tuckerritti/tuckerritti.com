@@ -335,7 +335,7 @@ body {
 /* Section 3 */
 .section-3 .timeline-grid-container {
     position: absolute;
-    height: 80vh;
+    height: 80%;
     width: 60%;
     top: 50%;
     left: 50%;
@@ -423,7 +423,7 @@ body {
     /* Expand the timeline grid container */
     .section-3 .timeline-grid-container {
         width: 80%;
-        height: 95vh;
+        height: 95%;
     }
 
     /* Move the timeline to the left */
