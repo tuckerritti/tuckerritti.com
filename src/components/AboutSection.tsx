@@ -4,7 +4,7 @@ const AboutSection: FunctionComponent = () => {
   return (
     <div
       id="about-section"
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-800 relative px-4 py-8"
+      className="min-h-[50vh] w-full flex flex-col items-center justify-center bg-gray-800 relative px-4 py-8"
     >
       <h2 className="text-yellow-400 text-3xl md:text-4xl font-bold mb-8 tracking-wide text-center">
         About Me
