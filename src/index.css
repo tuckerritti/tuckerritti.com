@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* For the background pattern */
+.bg-gray-900 {
+  background-color: #1a1a1a;
+  background-image: radial-gradient(#333 1px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -19px -19px;
+}
+
+/* For the profile image background */
+.bg-yellow-400 {
+  background-color: #fbbf24;
+}
+
+/* For text color */
+.text-yellow-400 {
+  color: #fbbf24;
+}
+
+.text-yellow-300:hover {
+  color: #fcd34d;
+}
