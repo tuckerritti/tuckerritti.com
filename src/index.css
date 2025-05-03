@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  z-index: 1;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,20 +16,34 @@ body {
   overflow: hidden;
 }
 
-/* For the background pattern */
 .bg-gray-900 {
   background-color: #1a1a1a;
-  background-image: radial-gradient(#333 1px, transparent 0);
-  background-size: 30px 30px;
-  background-position: -19px -19px;
+  background-image: none;
 }
 
-/* For the profile image background */
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+  gap: 40px;
+  opacity: 0.15;
+}
+
+.grid-icon {
+  color: #6b7280;
+  font-size: 25px;
+  place-self: center;
+}
+
 .bg-yellow-400 {
   background-color: #fbbf24;
 }
 
-/* For text color */
 .text-yellow-400 {
   color: #fbbf24;
 }
