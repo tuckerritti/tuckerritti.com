@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+* {
+  z-index: 1;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-gray-900 {
+  background-color: #1a1a1a;
+  background-image: none;
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+  gap: 40px;
+  opacity: 0.15;
+}
+
+.grid-icon {
+  color: #6b7280;
+  font-size: 25px;
+  place-self: center;
+}
+
+.bg-yellow-400 {
+  background-color: #fbbf24;
+}
+
+.text-yellow-400 {
+  color: #fbbf24;
+}
+
+.text-yellow-300:hover {
+  color: #fcd34d;
+}
