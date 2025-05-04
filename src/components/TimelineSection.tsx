@@ -8,31 +8,40 @@ interface TimelineItem {
 const TimelineSection: FunctionComponent = () => {
   const timelineItems: TimelineItem[] = [
     { year: "2025:", content: "Software Engineering Internship at Amazon" },
+    { year: "2025:", content: "Mentor at Curious Cardinals"},
+
     { year: "2024:", content: "Software Engineering Internship at Loops" },
+
+    { year: "2023:", content: "Software Engineering Internship at Snap Inc on the Privacy Engineering Team" },
+    
     { year: "2022:", content: "Co-Founder and CTO of Ticket Tutors Inc." },
     { year: "2022:", content: "Creator and lead developer of the Crossroads Sign Out App" },
-    { year: "2021:", content: "Completed the Stanford CS106B computer science summer program" },
-    { year: "2020:", content: "Worked as a backend engineer at Cazino.LTD" },
-    { year: "2023:", content: "Software Engineering Internship at Snap Inc on the Privacy Engineering Team" },
     { year: "2022:", content: "Software Engineering Internship at Snap Inc on the Human-Computer Interaction Team" },
     { year: "2022:", content: "Certified ASEL Private Pilot with an instrument rating" },
+
+    { year: "2021:", content: "Completed the Stanford CS106B computer science summer program" },
+
+    { year: "2020:", content: "Worked as a backend engineer at Cazino.LTD" },
     { year: "2020:", content: "Lead Technical Director at Chords2Cure" },
     { year: "2020:", content: "Started a freelance web development business, creating full stack web applications and bitcoin casinos for clients" },
+
     { year: "2019:", content: "Started a network deployment business for residential infrastructures" },
     { year: "2019:", content: "Completed the cyber-security and encryption course at iDTech UCLA" },
     { year: "2019:", content: "Started a Discord community with 2,795 members that helps people perform P2P exchanges between crypto and fiat currencies. My co-owner and I manage 6 staff members which are paid based on commission" },
-    { year: "2018:", content: "Completed the C++ course at iDTech UCLA" },
     { year: "2019:", content: "Converted VHS tapes to digital for customers, including Saban Entertainment, Inc." },
     { year: "2019:", content: "Completed the artificial intelligence and machine learning course at iDTech UCLA" },
+    
+    { year: "2018:", content: "Completed the C++ course at iDTech UCLA" },
     { year: "2018:", content: "Created a phone repair business, fixing phones for students and staff at my school" },
+
     { year: "2017:", content: "Started a custom PC building business" },
   ];
   
   return (
-    <div className="py-20 pr-3 md:px-6 timeline-section">
+    <div className="py-10 pr-3 md:px-6 timeline-section">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-yellow-400 text-3xl md:text-4xl font-bold mb-6 tracking-wide text-center">
-          My Timeline
+          Career & Technical Milestones
         </h2>
         
         <div className="relative w-full">
