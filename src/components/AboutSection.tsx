@@ -17,7 +17,7 @@ const AboutSection: FunctionComponent = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 mb-4">
           <div className="text-center">
             <p className="text-yellow-400 font-bold">GPA</p>
-            <p>3.80 / 4.00</p>
+            <p>3.84 / 4.00</p>
           </div>
           <div className="text-center">
             <p className="text-yellow-400 font-bold">ACT Score</p>
