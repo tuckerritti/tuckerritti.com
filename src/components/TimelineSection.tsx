@@ -7,6 +7,7 @@ interface TimelineItem {
 
 const TimelineSection: FunctionComponent = () => {
   const timelineItems: TimelineItem[] = [
+    { year: "2025:", content: "Transferred to Dartmouth College" },
     { year: "2025:", content: "Software Engineering Internship at Amazon" },
     { year: "2025:", content: "Mentor at Curious Cardinals"},
 

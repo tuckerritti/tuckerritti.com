@@ -11,19 +11,18 @@ const AboutSection: FunctionComponent = () => {
       </h2>
 
       <div className="max-w-2xl text-white text-lg leading-relaxed text-center">
-        <p className="mb-6">
-          My name is Tucker Ritti, and I am an undergraduate computer science student at Georgia Tech. I have always been fascinated with how things work.
+        <p className="mb-4">
+          I'm Tucker, a junior at Dartmouth studying Computer Science and Economics.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-12 mb-4">
-          <div className="text-center">
-            <p className="text-yellow-400 font-bold">GPA</p>
-            <p>3.84 / 4.00</p>
-          </div>
-          <div className="text-center">
-            <p className="text-yellow-400 font-bold">ACT Score</p>
-            <p>36</p>
-          </div>
-        </div>
+        <p className="mb-4">
+          Most of what I work on lives at the intersection of software and business. I've interned at Amazon, Snap, and Loops, and in high school I founded Ticket Tutors, a tutoring marketplace that reached 1,900+ users. My interests sit with startups in fintech and construction tech, and I spend most of my time thinking about problems in those spaces.
+        </p>
+        <p className="mb-4">
+          Outside of school, I'm a private pilot with an instrument rating, and I restore and flip Porsches. I'm also training for a triathlon later this year.
+        </p>
+        <p>
+          If you want to talk about a project or an idea, my inbox is open.
+        </p>
       </div>
     </div>
   );
